@@ -1,0 +1,11 @@
+{
+  "name": "localForage-cordovaSQLiteDriver",
+  "version": "1.0.0",
+  "dependencies": {
+    "then/promise": "5.0.0"
+  },
+  "scripts": [
+    "src/localforage-cordovasqlitedriver.js"
+  ],
+  "main": "src/localforage-cordovasqlitedriver.js"
+}
