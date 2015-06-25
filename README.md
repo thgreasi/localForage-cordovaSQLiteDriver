@@ -1,6 +1,6 @@
 # localForage-cordovaSQLiteDriver
 
-SQLite driver [Cordova](https://cordova.apache.org/) apps using [localForage](https://github.com/mozilla/localForage).
+SQLite driver for [Cordova](https://cordova.apache.org/) apps using [localForage](https://github.com/mozilla/localForage).
 
 ## requirements
 
