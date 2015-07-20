@@ -1,5 +1,5 @@
 # localForage-cordovaSQLiteDriver
-
+[![npm](https://img.shields.io/npm/dm/localforage-cordovasqlitedriver.svg)](https://www.npmjs.com/package/localforage-cordovasqlitedriver)  
 SQLite driver for [Cordova](https://cordova.apache.org/) apps using [localForage](https://github.com/mozilla/localForage).
 
 ## requirements
