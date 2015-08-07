@@ -48,3 +48,4 @@ localforage.defineDriver(window.cordovaSQLiteDriver).then(function() {
 });
 </script>
 ```
+[Exaple Ionic project](https://github.com/thgreasi/localForage-cordovaSQLiteDriver-TestIonicApp)
