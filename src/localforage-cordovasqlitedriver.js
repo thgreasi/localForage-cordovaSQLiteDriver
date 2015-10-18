@@ -87,7 +87,14 @@
             }
         }
 
-        var serializerPromise = new Promise(function(resolve/*, reject*/) {
+        var serializerPromise = new Promise(function(resolve, reject) {
+
+            // add support for localforage v1.3.x
+            if (typeof self.getSerializer === 'function') {
+                self.getSerializer().then(resolve, reject);
+                return;
+            }
+
             // We allow localForage to be declared as a module or as a
             // library available without AMD/require.js.
             if (moduleType === ModuleType.DEFINE) {
