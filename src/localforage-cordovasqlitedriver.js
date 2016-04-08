@@ -113,12 +113,13 @@
                 // Open the database; the openDatabase API will automatically
                 // create it for us if it doesn't exist.
                 try {
+                    dbInfo.location = dbInfo.location || 'default';
                     dbInfo.db = openDatabase({
-                      name: dbInfo.name,
-                      version: String(dbInfo.version),
-                      description: dbInfo.description,
-                      size: dbInfo.size,
-                      location: 'default'
+                        name: dbInfo.name,
+                        version: String(dbInfo.version),
+                        description: dbInfo.description,
+                        size: dbInfo.size,
+                        location: dbInfo.location
                     });
                 } catch (e) {
                     reject(e);
