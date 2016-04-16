@@ -2,6 +2,15 @@
 [![npm](https://img.shields.io/npm/dm/localforage-cordovasqlitedriver.svg)](https://www.npmjs.com/package/localforage-cordovasqlitedriver)  
 SQLite driver for [Cordova](https://cordova.apache.org/) apps using [localForage](https://github.com/mozilla/localForage).
 
+## upgrade warning
+
+*BREAKING CHANGE*
+The default storage location for SQLite has changed in newer versions of [Cordova SQLite storage plugin](https://github.com/litehelpers/Cordova-sqlite-storage/)
+
+*WARNING*: The new "default" location value is NOT the same as the old default location and would break an upgrade for an app that was using the old default value (0) on iOS.
+
+If you are upgrading to a newer version of `localForage-cordovaSQLiteDriver` you need to verify where your previous storage location was and update the `location` property of the localForage database. Otherwise the default is `'default'`. This is to avoid breaking the iCloud Design Guide. See [here](https://github.com/litehelpers/Cordova-sqlite-storage#important-icloud-backup-of-sqlite-database-is-not-allowed) for further details.
+
 ## requirements
 
 * [Cordova](https://cordova.apache.org/)/[ionic](http://ionicframework.com/)
