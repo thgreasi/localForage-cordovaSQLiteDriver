@@ -88,24 +88,12 @@
         }
 
         var serializerPromise = new Promise(function(resolve, reject) {
-
-            // add support for localforage v1.3.x
-            if (typeof self.getSerializer === 'function') {
-                self.getSerializer().then(resolve, reject);
-                return;
+            if (typeof self.getSerializer !== 'function') {
+                throw new Error(
+                    'localforage.getSerializer() was not available! ' +
+                    'localforage-cordovasqlitedriver required localforage v1.3+');
             }
-
-            // We allow localForage to be declared as a module or as a
-            // library available without AMD/require.js.
-            if (moduleType === ModuleType.DEFINE) {
-                require(['localforageSerializer'], resolve);
-            } else if (moduleType === ModuleType.EXPORT) {
-                // I guess bower installed localforage next to this plugin.
-                // Making it browserify friendly
-                resolve(require('./../../localforage/src/utils/serializer'));
-            } else {
-                resolve(globalObject.localforageSerializer);
-            }
+            self.getSerializer().then(resolve, reject);
         });
 
         var dbInfoPromise = openDatabasePromise.then(function(openDatabase){
