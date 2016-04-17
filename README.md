@@ -15,7 +15,7 @@ If you are upgrading to a newer version of `localForage-cordovaSQLiteDriver` you
 
 * [Cordova](https://cordova.apache.org/)/[ionic](http://ionicframework.com/)
 * [Cordova SQLite storage plugin](https://github.com/litehelpers/Cordova-sqlite-storage/)
-* [localForage](https://github.com/mozilla/localForage) v1.1.1+
+* [localForage](https://github.com/mozilla/localForage) v1.4.0+
 
 ## install dependencies
 
