@@ -4,8 +4,8 @@ SQLite driver for [Cordova](https://cordova.apache.org/) apps using [localForage
 
 ## upgrade warning
 
-*BREAKING CHANGE*
-The default storage location for SQLite has changed in newer versions of [Cordova SQLite storage plugin](https://github.com/litehelpers/Cordova-sqlite-storage/)
+v1.2 *BREAKING CHANGE*
+The default storage location for SQLite has changed in newer versions of [Cordova SQLite storage plugin](https://github.com/litehelpers/Cordova-sqlite-storage/).
 
 *WARNING*: The new "default" location value is NOT the same as the old default location and would break an upgrade for an app that was using the old default value (0) on iOS.
 
