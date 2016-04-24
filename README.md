@@ -5,7 +5,7 @@ SQLite driver for [Cordova](https://cordova.apache.org/) apps using [localForage
 ## Requirements
 
 * [Cordova](https://cordova.apache.org/)/[ionic](http://ionicframework.com/)
-* [Cordova SQLite storage plugin](https://github.com/litehelpers/Cordova-sqlite-storage/)
+* [Cordova SQLite storage plugin](https://github.com/litehelpers/Cordova-sqlite-storage/) or [Cordova SQLite Plugin 2](https://github.com/nolanlawson/cordova-plugin-sqlite-2)
 * [localForage](https://github.com/mozilla/localForage) v1.4.0+
   * for earlier versions of localforage, please use the v1.2.x releases
 
