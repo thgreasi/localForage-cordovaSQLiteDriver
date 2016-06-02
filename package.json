@@ -1,6 +1,6 @@
 {
   "name": "localforage-cordovasqlitedriver",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "SQLite driver for Cordova apps using localForage.",
   "homepage": "https://github.com/thgreasi/localForage-cordovaSQLiteDriver",
   "main": "dist/localforage-cordovasqlitedriver.js",
