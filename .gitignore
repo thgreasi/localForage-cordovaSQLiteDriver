@@ -1,6 +1,5 @@
 .DS_Store
 .swp
-dist
 build
 bower_components
 node_modules
