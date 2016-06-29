@@ -67,3 +67,4 @@ localforage.defineDriver(window.cordovaSQLiteDriver).then(function() {
 
 ## Examples
 * [Exaple Cordova/Ionic project](https://github.com/thgreasi/localForage-cordovaSQLiteDriver-TestIonicApp)
+* [Exaple Ionic2/Angular2/Typescript project](https://github.com/thgreasi/localForage-cordovaSQLiteDriver-TestIonic2App)
