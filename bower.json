@@ -2,7 +2,7 @@
   "name": "localforage-cordovasqlitedriver",
   "version": "1.4.1",
   "main": [
-    "src/localforage-cordovasqlitedriver.js"
+    "dist/localforage-cordovasqlitedriver.js"
   ],
   "ignore": [
     ".travis.yml",
