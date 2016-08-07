@@ -38,7 +38,7 @@ Try using the `getSerializer()` (available in localforage v1.3) as the prefered 
 <script src="cordova.js"></script>
 
 <script src="lib/localforage/dist/localforage.js"></script>
-<script src="lib/localForage-cordovaSQLiteDriver/src/localforage-cordovasqlitedriver.js"></script>
+<script src="lib/localForage-cordovaSQLiteDriver/dist/localforage-cordovasqlitedriver.js"></script>
 <script>
 localforage.defineDriver(window.cordovaSQLiteDriver).then(function() {
     return localforage.setDriver([
