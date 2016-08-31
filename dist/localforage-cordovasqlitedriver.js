@@ -9,7 +9,7 @@
             return getSerializerPromise.result;
         }
         if (!localForageInstance || typeof localForageInstance.getSerializer !== 'function') {
-            Promise.reject(new Error('localforage.getSerializer() was not available! ' + 'localforage v1.4+ is required!'));
+            return Promise.reject(new Error('localforage.getSerializer() was not available! ' + 'localforage v1.4+ is required!'));
         }
         getSerializerPromise.result = localForageInstance.getSerializer();
         return getSerializerPromise.result;
@@ -21,7 +21,7 @@
             return getDriverPromise.result[driverName];
         }
         if (!localForageInstance || typeof localForageInstance.getDriver !== 'function') {
-            Promise.reject(new Error('localforage.getDriver() was not available! ' + 'localforage v1.4+ is required!'));
+            return Promise.reject(new Error('localforage.getDriver() was not available! ' + 'localforage v1.4+ is required!'));
         }
         getDriverPromise.result[driverName] = localForageInstance.getDriver(driverName);
         return getDriverPromise.result[driverName];
