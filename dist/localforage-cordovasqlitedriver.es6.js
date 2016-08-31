@@ -36,11 +36,15 @@ var deviceReady = new Promise(function (resolve, reject) {
         reject();
     } else {
         // Wait for Cordova to load
-        document.addEventListener("deviceready", resolve, false);
+        document.addEventListener("deviceready", function () {
+            return resolve();
+        }, false);
     }
 });
 
-var openDatabasePromise = deviceReady.catch(Promise.resolve).then(function () {
+var openDatabasePromise = deviceReady.catch(function () {
+    return Promise.resolve();
+}).then(function () {
     return new Promise(function (resolve, reject) {
         if (typeof sqlitePlugin !== 'undefined' && typeof sqlitePlugin.openDatabase === 'function') {
             resolve(sqlitePlugin.openDatabase);
