@@ -40,7 +40,7 @@ var deviceReady = new Promise(function (resolve, reject) {
     }
 });
 
-var openDatabasePromise = deviceReady.catch(Promise.resolve).then(function () {
+var openDatabasePromise = deviceReady.then(function () {
     return new Promise(function (resolve, reject) {
         if (typeof sqlitePlugin !== 'undefined' && typeof sqlitePlugin.openDatabase === 'function') {
             resolve(sqlitePlugin.openDatabase);
@@ -48,6 +48,8 @@ var openDatabasePromise = deviceReady.catch(Promise.resolve).then(function () {
             reject('SQLite plugin is not present.');
         }
     });
+}).catch(function () {
+    return Promise.resolve();
 });
 
 // // If cordova is not present, we can stop now.
