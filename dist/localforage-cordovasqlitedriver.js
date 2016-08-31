@@ -39,7 +39,7 @@
         if (typeof sqlitePlugin !== 'undefined') {
             resolve();
         } else if (typeof cordova === 'undefined') {
-            reject();
+            reject(new Error('codova is not undefined.'));
         } else {
             // Wait for Cordova to load
             document.addEventListener("deviceready", function () {
@@ -48,17 +48,19 @@
         }
     });
 
-    var openDatabasePromise = deviceReady.catch(function () {
+    var deviceReadyDone = deviceReady.catch(function () {
         return Promise.resolve();
-    }).then(function () {
-        return new Promise(function (resolve, reject) {
+    });
+
+    function getOpenDatabasePromise() {
+        return deviceReadyDone.then(function () {
             if (typeof sqlitePlugin !== 'undefined' && typeof sqlitePlugin.openDatabase === 'function') {
-                resolve(sqlitePlugin.openDatabase);
+                return sqlitePlugin.openDatabase;
             } else {
-                reject('SQLite plugin is not present.');
+                throw new Error('SQLite plugin is not present.');
             }
         });
-    });
+    }
 
     // // If cordova is not present, we can stop now.
     // if (!globalObject.cordova) {
@@ -79,7 +81,7 @@
             }
         }
 
-        var dbInfoPromise = openDatabasePromise.then(function (openDatabase) {
+        var dbInfoPromise = getOpenDatabasePromise().then(function (openDatabase) {
             return new Promise(function (resolve, reject) {
                 // Open the database; the openDatabase API will automatically
                 // create it for us if it doesn't exist.
@@ -121,7 +123,7 @@
         _driver: 'cordovaSQLiteDriver',
         _initStorage: _initStorage,
         _support: function _support() {
-            return openDatabasePromise.then(function (openDatabase) {
+            return getOpenDatabasePromise().then(function (openDatabase) {
                 return !!openDatabase;
             }).catch(function () {
                 return false;
