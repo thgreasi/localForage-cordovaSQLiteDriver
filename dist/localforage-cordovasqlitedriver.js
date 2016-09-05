@@ -39,7 +39,7 @@
         if (typeof sqlitePlugin !== 'undefined') {
             resolve();
         } else if (typeof cordova === 'undefined') {
-            reject(new Error('codova is not undefined.'));
+            reject(new Error('cordova is not defined.'));
         } else {
             // Wait for Cordova to load
             document.addEventListener("deviceready", function () {
