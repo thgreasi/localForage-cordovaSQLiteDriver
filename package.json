@@ -5,6 +5,7 @@
   "homepage": "https://github.com/thgreasi/localForage-cordovaSQLiteDriver",
   "main": "dist/localforage-cordovasqlitedriver.js",
   "jsnext:main": "dist/localforage-cordovasqlitedriver.es6.js",
+  "typings": "typings/localforage-cordovasqlitedriver.d.ts",
   "scripts": {
     "prebuild": "eslint lib test",
     "build": "rollup -c rollup.config.umd.js && rollup -c rollup.config.es6.js",
@@ -39,6 +40,7 @@
     "source-map-support": "^0.4.0"
   },
   "dependencies": {
+    "@types/localforage": "0.0.30",
     "localforage": ">=1.4.0"
   }
 }
