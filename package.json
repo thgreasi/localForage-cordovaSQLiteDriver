@@ -1,6 +1,6 @@
 {
   "name": "localforage-cordovasqlitedriver",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "SQLite driver for Cordova apps using localForage.",
   "homepage": "https://github.com/thgreasi/localForage-cordovaSQLiteDriver",
   "main": "dist/localforage-cordovasqlitedriver.js",
@@ -29,18 +29,20 @@
     "url": "http://github.com/thgreasi/localForage-cordovaSQLiteDriver/issues"
   },
   "devDependencies": {
-    "babel-eslint": "^6.0.4",
-    "babel-preset-es2015-rollup": "^1.1.1",
+    "babel-eslint": "^7.1.1",
+    "babel-plugin-external-helpers": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-register": "^6.18.0",
+    "babelrc-rollup": "^3.0.0",
     "eslint": "^2.8.0",
     "mocha": "^2.4.5",
     "requirejs": "^2.2.0",
-    "rollup": "^0.26.1",
-    "rollup-plugin-babel": "^2.4.0",
-    "rollup-plugin-multi-entry": "^1.2.0",
+    "rollup": "^0.37.0",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-multi-entry": "^2.0.1",
     "source-map-support": "^0.4.0"
   },
   "dependencies": {
-    "@types/localforage": "0.0.30",
-    "localforage": ">=1.4.0"
+    "localforage": ">=1.5.0"
   }
 }

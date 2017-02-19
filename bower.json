@@ -1,6 +1,6 @@
 {
   "name": "localforage-cordovasqlitedriver",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "main": [
     "dist/localforage-cordovasqlitedriver.js"
   ],
@@ -18,6 +18,6 @@
     "site*"
   ],
   "dependencies": {
-    "localforage": "^1.4.0"
+    "localforage": "^1.5.0"
   }
 }
