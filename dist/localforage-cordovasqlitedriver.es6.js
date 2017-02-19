@@ -56,6 +56,17 @@ function getOpenDatabasePromise() {
     });
 }
 
+/*
+ * Includes code from:
+ *
+ * localForage - websql driver
+ * https://github.com/mozilla/localforage
+ *
+ * Copyright (c) 2015 Mozilla
+ * Licensed under Apache 2.0 license.
+ *
+ */
+// import localforage from 'localforage';
 // // If cordova is not present, we can stop now.
 // if (!globalObject.cordova) {
 //     return;
