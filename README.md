@@ -5,7 +5,7 @@ SQLite driver for [Cordova](https://cordova.apache.org/) apps using [localForage
 ## Requirements
 
 * [Cordova](https://cordova.apache.org/)/[ionic](http://ionicframework.com/)
-* [Cordova SQLite storage plugin](https://github.com/litehelpers/Cordova-sqlite-storage/) or [Cordova SQLite Plugin 2](https://github.com/nolanlawson/cordova-plugin-sqlite-2)
+* [Cordova SQLite storage plugin](https://github.com/litehelpers/Cordova-sqlite-storage/) or [Cordova SQLite Plugin 2](https://github.com/nolanlawson/cordova-plugin-sqlite-2) or [Cordova SQLCipher adapter plugin](https://github.com/litehelpers/Cordova-sqlcipher-adapter)
 * [localForage](https://github.com/mozilla/localForage) v1.5.0+
   * for localforage 1.4.x, please use the v1.5.0 release of this package
   * for even older versions of localforage, please use the v1.2.x releases
@@ -24,7 +24,7 @@ install the plugin by
 cordova plugin add cordova-sqlcipher-adapter --save
 ```
 
-Pass the key required by the database via the localforage object(by passing __dbKey__) or if using ionic-storage by passing __dbKey__ via IonicStorageModule in your NgModule
+Pass the key required by the database to localforage by passing a `dbKey` property to the [`.config()`](https://localforage.github.io/localForage/#settings-api-config) or [`.createInstance()`](https://localforage.github.io/localForage/#multiple-instances-createinstance) methods, or if using ionic-storage by passing `dbKey` via IonicStorageModule in your NgModule.
 
 ## CHANGELOG
 
