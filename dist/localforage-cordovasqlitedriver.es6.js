@@ -97,6 +97,7 @@ function _initStorage(options) {
                     version: String(dbInfo.version),
                     description: dbInfo.description,
                     size: dbInfo.size,
+                    key: dbInfo.dbKey,
                     location: dbInfo.location
                 });
             } catch (e) {
