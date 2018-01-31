@@ -28,6 +28,18 @@ Pass the key required by the database to localforage by passing a `dbKey` proper
 
 ## CHANGELOG
 
+### v1.7
+Add support for cordova-sqlcipher-adapter. Thanks to @kohlia for PRing this.
+
+### v1.6
+Use localforage v1.5 & drop @types.
+
+### v1.5
+Add typescript typings.
+
+### v1.4
+Refactor to es6.
+
 ### v1.3
 Reduce driver size (almost by 50%) by "inheriting" the method implementations of the `localforage.WEBSQL` driver.
 
