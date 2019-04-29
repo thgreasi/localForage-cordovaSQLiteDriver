@@ -14,9 +14,7 @@ SQLite driver for [Cordova](https://cordova.apache.org/) apps using [localForage
 ## Install Dependencies
 
 * install Cordova-sqlite-storage plugin `cordova plugin add https://github.com/litehelpers/Cordova-sqlite-storage.git`
-* install localForage-cordovaSQLiteDriver
-  * via npm with: `npm i --save localforage localforage-cordovasqlitedriver` (ionic 2 users might prefer ths one)
-  * via bower with: `bower install --save localforage localForage-cordovaSQLiteDriver`
+* install localForage-cordovaSQLiteDriver via npm with: `npm i --save localforage localforage-cordovasqlitedriver` (ionic 2 users might prefer ths one)
 
 #### Cordova-sqlcipher-adapter support
 install the plugin by
