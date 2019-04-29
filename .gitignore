@@ -3,7 +3,7 @@
 build
 bower_components
 node_modules
-components
+dist
 
 # Logs + Sauce Labs Tests
 *.log

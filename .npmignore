@@ -1,0 +1,10 @@
+.babelrc
+.eslintrc
+.jscsrc
+.jshintrc
+.travis.yml
+build/
+rollup.config.es6.js
+rollup.config.js
+rollup.config.test.js
+rollup.config.umd.js
