@@ -26,6 +26,9 @@ Pass the key required by the database to localforage by passing a `dbKey` proper
 
 ## CHANGELOG
 
+### v1.8
+Add support for the `localforage.dropInstance()` method.
+
 ### v1.7
 Add support for cordova-sqlcipher-adapter. Thanks to @kohlia for PRing this.
 
